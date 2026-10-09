@@ -77,7 +77,7 @@ describe("anniversary surprise", () => {
     expect(screen.getByLabelText(/soundtrack controls/i)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /watch on youtube/i })).toHaveAttribute(
       "href",
-      "https://www.youtube.com/watch?v=v82VtUUGFqk"
+      "https://www.youtube.com/watch?v=dCWMpvzMM1Y"
     );
     expect(document.querySelector("audio")).not.toBeInTheDocument();
   });
