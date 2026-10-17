@@ -1310,29 +1310,6 @@ img {
   color: var(--gold-light);
 }
 
-.slide-dots {
-  display: flex;
-  gap: 7px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.slide-dots button {
-  width: 18px;
-  height: 3px;
-  padding: 0;
-  border: 0;
-  border-radius: 9px;
-  background: rgba(255, 249, 242, 0.16);
-  cursor: pointer;
-  transition: width 220ms ease, background 220ms ease;
-}
-
-.slide-dots button.active {
-  width: 34px;
-  background: var(--gold);
-}
-
 .film-strip {
   position: absolute;
   top: 10px;

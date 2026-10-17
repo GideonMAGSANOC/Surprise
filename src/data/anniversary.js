@@ -1,3 +1,5 @@
+import photoFiles from "./photos.json";
+
 export const validationQuestions = [
   {
     eyebrow: "Identity check",
@@ -25,48 +27,11 @@ export const validationQuestions = [
   },
 ];
 
-export const memories = [
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-1.jpg`,
-    label: "The way our story began",
-    date: "Chapter one",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-2.jpg`,
-    label: "Every laugh I want to hear again",
-    date: "Us, being us",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-3.jpg`,
-    label: "Ordinary days made extraordinary",
-    date: "My favorite place",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-4.jpg`,
-    label: "All the little adventures",
-    date: "Side by side",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-5.jpg`,
-    label: "The calm inside every storm",
-    date: "Home is you",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-6.jpg`,
-    label: "Four years, a thousand memories",
-    date: "Still choosing you",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-7.jpg`,
-    label: "And so much more to come",
-    date: "Our next chapter",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}photos/photo-8.jpg`,
-    label: "My favorite love story",
-    date: "Always & forever",
-  },
-];
+export const memories = photoFiles.map((filename, index) => ({
+  src: `${import.meta.env.BASE_URL}photos/${encodeURIComponent(filename)}`,
+  label: "A moment worth keeping",
+  date: `Memory ${String(index + 1).padStart(2, "0")}`,
+}));
 
 export const milestones = [
   {
